@@ -11,16 +11,13 @@
     "test": "jest",
     "test:watch": "yarn test --watch",
     "storybook": "start-storybook -s ./public -p  6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "postinstall": "husky install"
   },
   "lint-staged": {
     "src/**/*": [
       "yarn lint --fix",
-      "yarn test --findRelatedTest --bail"
-    ],
-    "*.js": [
-      "yarn lint --cache --fix",
-      "eslint --cache --fix"
+      "yarn test --findRelatedTests --bail"
     ]
   },
   "dependencies": {
